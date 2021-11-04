@@ -86,11 +86,22 @@ ORDER BY COUNT(City) DESC;
 SELECT Stadium, State, COUNT(Stadium)
 FROM superbowl
 GROUP BY Stadium, State
-<<<<<<< HEAD
 ORDER BY COUNT(Stadium) DESC;
-=======
-ORDER BY COUNT(Stadium) DESC;
-<<<<<<< HEAD
 
--- tableau dahboard for data above:- https://public.tableau.com/app/profile/abhiyan.sapkota/viz/SuperBowlDashboard_16358787975250/Dashboard1?publish=yes
+-- CHECK HOW MANY TIMES A TEAM HAS WON; WAS 3 FOR BRONCOS. 
+-- SIMILARLY REPLACING WINNER FOR LOSER WILL GIVE HOW MANY TIMES A TEAM HAS LOST
+SELECT Winner, COUNT(Winner) AS Times
+FROM superbowl
+WHERE Winner = 'Denver Broncos';
+
+-- CHECK HOW MANY TIMES A TEAM HAS APPEARED IN THE SB
+-- RUN THE QUERY ABOVE AND THE ONE BELOW
+SELECT Loser, COUNT(Loser) AS Times
+FROM superbowl
+WHERE Loser = 'Denver Broncos';
+
+-- GIVES WON 3, LOST 5 WHICH EQUALS 8 APPEARANCES IN THE SB 
+
+
+
 
